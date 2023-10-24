@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CalcController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/view/calcs/{number1}/addition/{number2}', function($number1,$nnumber2) {
-    return view('message.')
-}
+Route::get('/calcs',[CalcController::class]);
